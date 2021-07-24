@@ -4,13 +4,11 @@ function multi(c, d) {
     return c * d;
 }
 
-
 console.log(multi(2, 3));
 
 // Neste caso temos a técnica do "Currying", que é utilizada quando declaramos uma função dentro de outra. Pra evitar de ter de repetir a atribuição de valor de uma variável/constante da função que é fixa, declaramos uma variável/constante e atribuímos o nome da 'Function Pai' com esse valor especificado apenas uma vez e chamamos esta variável/constante na hora de executá-la, e apenas teremos que especificar o valor da 'Function filha'.
-
-function somar(a) {             // Function Pai
-    return function (b) {       // Retorno da Function Pai = Function Filha
+function somar(a) {             // Function Pai(a)
+    return function (b) {       // Retorno da Function Pai = Function Filha(b)
         return a + b;           // Retorno da Function Filha = a + b
     }
 }
