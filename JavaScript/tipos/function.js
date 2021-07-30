@@ -6,8 +6,8 @@ function testeInt(nota) {
 testeInt(7);
 
 // Sintaxe da versão ES6 de declaração de funções no JavaScript. 'Arrow Function(=>)'
-const teste = () => console.log("Testando 1..2..3..");                  // Função criada como 'const', sem parâmetro definido, método minimalista.
-const testeFloat = (nota) => {                                          // Função criada como 'const', com parâmetro definido, método tradicional.
+const teste = () => console.log("Testando 1..2..3..");                  // Arrow Function criada como 'const', sem parâmetro definido, método minimalista.
+const testeFloat = (nota) => {                                          // Arrow Function criada como 'const', com parâmetro definido, método padrão.
     return console.log(`Nota do Teste: ${parseFloat(nota)}\n`);
 };
 
