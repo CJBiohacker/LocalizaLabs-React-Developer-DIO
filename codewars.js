@@ -12,6 +12,7 @@ function mouthSize(animal) {
 
 mouthSize("Tamanduá");
 mouthSize("ALLIGATOR");
+
 /* ------------------------------------------- */
 
 
@@ -37,6 +38,7 @@ mouthSize("ALLIGATOR");
 // }
 
 // task("Friday", 10, 5);
+
 /* ------------------------------------------- */
 
 /* MULTIPLICATION TABLE FOR NUMBER CODEWARS */
@@ -48,6 +50,7 @@ mouthSize("ALLIGATOR");
 // }
 
 // multiTable(5);
+
 /* ------------------------------------------- */
 
 /* WHAT'S THE REAL FLOOR? CODEWARS */
@@ -65,4 +68,5 @@ mouthSize("ALLIGATOR");
 // }
 
 // console.log(getRealFloor(15));
+
 /* ------------------------------------------- */
