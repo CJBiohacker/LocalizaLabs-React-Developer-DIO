@@ -70,25 +70,3 @@ console.log(`-> 'Splice' de Locais e Armas\n${placesWeapons}`);
 
 placesWeapons.splice(0, 1, 'Ciri', 'Vesemir');                          // Alterou a array e removeu o antigo elemento do índice 0 ('Geralt') e adicionando 2 novos elementos a partir desta posição ('Ciri' e 'Vesemir').
 console.log(`-> 'Splice' de Locais e Armas\n${placesWeapons}`);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 'Geralt', 'Dandelion', 'Ciri', 'Triss', 'Yennefer', 'Eskel', 'Lambert', 'Vesemir'
