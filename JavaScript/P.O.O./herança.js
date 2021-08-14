@@ -9,13 +9,11 @@ function Monster(tipo) {                        // Criação do novo tipo de Obj
 
 function Bruxa(sugaSangue) {                    // Criação da 'Bruxa', que é um objeto oriundo do "Objeto Principal" 'Monster'. Traduzindo para uma linguagem simples, Bruxa é um tipo de Monstro.
     Monster.call(this, 'Vampire');              // O método 'call' chama outro método de uma função que está fora do escopo desta função. Aqui faremos a classificação da Bruxa como: Monstro do tipo Vampiro.
-
     this.bloodsuck = sugaSangue;                // Criação do método 'bloodsuck', que é o parâmetro da função. Quando a função for chamada ou atribuída, em forma de construtor, à uma variável, terá esse valor especificado pelo Dev. Neste caso podendo ser 'True' ou 'False'.
 }
 
 function Drowner(sugaSangue) {                  // Criação do 'Drowner', outro tipo de monstro. Baseado no mesmo conceito da 'Bruxa'.
     Monster.call(this, 'Necrophage');
-
     this.bloodsuck = sugaSangue;
 }
 
