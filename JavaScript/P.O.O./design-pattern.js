@@ -102,7 +102,17 @@ observador.notificar(`Notificado 2`);                                       // R
 
 // MODULE - Pattern que possibilita organizar melhor o código, sem a necessidade de expor variáveis globais.
 
-function getMonster() {
+let tipo = 'genérico';
 
+function getMonsterType() {                 // Função que retorna a variável 'tipo'.
+    return tipo;
 }
 
+function setMonsterType(novoTipo) {         // Função que atribui a variável 'tipo' ao valor 'novoTipo', que serve de parâmetro pra função.
+    tipo = novoTipo;
+}
+
+module.exports = {                          // Exporta as duas funções criadas.
+    getMonsterType,
+    setMonsterType
+};
