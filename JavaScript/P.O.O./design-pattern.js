@@ -21,8 +21,8 @@ const fireBolt = new Magic();               // Exemplo de Função que não é '
 console.log(fireBolt);                      // Resultado = 'Magic { formato: 'Seta', magia: 'Fogo' }'
 
 function HealingMagic() {
-    this.tipo = 'Cura'
-    this.entidade = ' dos Espíritos'
+    this.tipo = 'Cura';
+    this.entidade = ' dos Espíritos';
     return this.tipo + this.entidade;
 }
 
