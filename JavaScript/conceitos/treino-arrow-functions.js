@@ -12,7 +12,7 @@ var logicaAnd = (a, b) => a && b;                                           // M
 console.log(`Lógica Not\n!0 = ${logicaNot(0)}`);                            // '0 negado' = 'false negado' = true  
 console.log(`Lógica Not\n!1 = ${logicaNot(1)}`);                            // '1 negado' = 'true negado' = false
 
-var monster = () => ({ tipo: 'Specter', nome: 'Banshee' });                 // Arrow Function sem parâmetro que retorna um objeto, atribuída à uma variável. Por existir um objeto, é necessário os parenteses.
+var monster = () => ({ tipo: 'Specter', nome: 'Banshee' });                 // Arrow Function sem parâmetro que retorna um objeto e atribuída à uma variável. Por existir um objeto, é necessário os parenteses.
 console.log(monster());
 
 var banshee = {                                                             // Objeto com atributos com valores preenchidos por funções.
