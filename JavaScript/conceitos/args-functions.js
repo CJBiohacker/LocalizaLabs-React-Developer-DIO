@@ -23,7 +23,6 @@ function multi(a, b) {
     b = typeof b === 'undefined' ? 1 : b;       // Uso de 'ternary if' que compara em 'igualdade estrita' o 'tipo de b' à 'undefined' e retorna 1 se forem iguais, senão retorna o valor inicial de 'b'.
     return a * b;
 }
-
 console.log(multi(5, 0));                       // Desta vez a multiplicação acontece por causa da "correção" da lógica.
 
 // Atribuição de valor do parâmetro na declaração.
@@ -31,8 +30,7 @@ console.log(multi(5, 0));                       // Desta vez a multiplicação a
 function soma(a, b = a) {
     return a + b;
 }
-console.log(soma(5));
-
+console.log(soma(5))
 // 'Lazy Evaluation'
 
 function randomNumber() {
