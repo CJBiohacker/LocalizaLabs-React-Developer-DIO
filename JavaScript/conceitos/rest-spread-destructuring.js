@@ -46,8 +46,20 @@ var fireArms = ['Revolver', 'Pistol', 'Hunting Pistol', 'Flamethrower', 'Shotgun
 var shortRangeFireArms = [fireArms[0], fireArms[1], fireArms[2], fireArms[3], fireArms[4]];         // Adicionando por índice, as armas de curto alcance da array 'fireArms'.
 var longRangeFireArms = [fireArms[5], fireArms[6], fireArms[7]];                                    // Adicionando por índice, as armas de long alcance da array 'fireArms'.
 
-var [shortRange, longRange] = [fireArms.slice(0, 5), fireArms.slice(5)];                            // Atribuição pelo modo de Desestruturação. Para reduzir a linha de código, utilizamos o método slice para arrays.
+var [shortRange, longRange] = [fireArms.slice(0, 5), fireArms.slice(5)];                            // Atribuição pelo modo de Desestruturação com arrays. Para reduzir a linha de código, utilizamos o método slice.
 
 console.log(`Variável shortRangeFireArms => ${shortRangeFireArms}`);
 console.log(`Variável shortRange => ${shortRange}`);
+
+var Abby = {                                                                                        // Criação de um objeto qualquer com 3 propriedades.
+    name: 'Abby',
+    age: 22,
+    affiliation: 'Jackson Community'
+}
+
+var { name: varName, age: varAge, affiliation: varAffiliation } = Abby;                             // Atribuição pelo modo de Desestruturação com objetos. Vincula-se pra cada propriedade uma variável nova e atribuímos ao objeto criado 'Abby'.
+console.log(varName, varAge, varAffiliation);
+
+var { affiliation, name, age } = Abby;                                                              // Atribuição pelo modo de Desestruturação com objetos. Desta vez somente vincula-se a propriedade como variável ao objeto criado 'Abby.
+console.log(name, age, affiliation);
 
