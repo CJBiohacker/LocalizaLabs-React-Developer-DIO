@@ -24,3 +24,22 @@ console.log("\nEstrutura de Repetição 'For...of...' para repetição dos eleme
 for (const element of array2) {
     console.log(element);
 }
+
+// GENERATORS NO JAVASCRIPT ES6.
+/* 'Generator' ou 'Generator Function' é um tipo de função que pode ter a execução interrompida e posteriormente reconduzida, mantendo todo contexto, variáveis associadas e modificações salvas entre cada recondução. 
+Na sintaxe, é representando por um '*' após a palavra-chave 'function' ou antes de métodos criados pelo DEV.
+A interrupção do generator ocorre através da palavra-chave 'yield'.*/
+
+function* naturalNumbers() {
+    let number = 0
+    while (true) {
+        yield number;
+        number++;
+    }
+}
+
+const generator = naturalNumbers();
+
+for (let i = 0; i < 10; i++) {
+    console.log(generator.next());
+}
