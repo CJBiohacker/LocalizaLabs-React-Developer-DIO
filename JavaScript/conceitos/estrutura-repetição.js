@@ -47,15 +47,15 @@ console.log(`Agora você tem ${ammo} e sua mochila está cheia.`);
 
 console.log(`FOR IN...`);
 
-for (let i in numbers) {    // Repetição dos ÍNDICES da Array e de qualquer MÉTODO criado pelo usuário.
-    console.log(i);
+for (let index in numbers) {    // Repetição dos ÍNDICES da Array e de qualquer MÉTODO criado pelo usuário.
+    console.log(index);
 }
 
 // Estrutura de Repetição For of... (Utilizado para repetição especificada de elementos dentro de uma Array/Objeto)
 
 console.log(`FOR OUT...`);
 
-for (let i of numbers) {    // Repetição dos ELEMENTOS da Array.
-    console.log(i);
+for (let element of numbers) {    // Repetição dos ELEMENTOS da Array.
+    console.log(element);
 }
 console.log(`Imprimindo a propriedade numbers.newProp: ${numbers.newProp}`);
