@@ -38,7 +38,7 @@ do {
     console.log(`Tome mais 30.`);
 } while (ammo < counter);
 
-console.log(`Agora você tem ${ammo} e sua mochila est   á cheia.`);
+console.log(`Agora você tem ${ammo} e sua mochila está cheia.`);
 
 // Estrutura de Repetição For in... (Utilizado para repetição especificada dos índices ou propriedades criadas de uma Array/Objeto)
 console.log(`FOR IN...`);
