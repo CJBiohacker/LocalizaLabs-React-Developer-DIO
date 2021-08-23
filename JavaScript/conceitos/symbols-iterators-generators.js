@@ -30,16 +30,16 @@ for (const element of array2) {
 Na sintaxe, é representando por um '*' após a palavra-chave 'function' ou antes de métodos criados pelo DEV.
 A interrupção do generator ocorre através da palavra-chave 'yield'.*/
 
-function* naturalNumbers() {
-    let number = 0
-    while (true) {
-        yield number;
-        number++;
+const generatorObj = {
+    nums: [1, 2, 3, 4],
+    *[Symbol.iterator]() {
+        for (let i = 0; i < this.nums.length; i++) {
+            yield this.nums[i];
+        }
     }
-}
+};
 
-const generator = naturalNumbers();
-
-for (let i = 0; i < 10; i++) {
-    console.log(generator.next());
+console.log("\nGENERATORS OU GENERATOR FUNCTIONS");
+for (const element of generatorObj) {
+    console.log(element);
 }
