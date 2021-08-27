@@ -4,17 +4,16 @@
 var valor = 1;
 var erro = 0;
 
-let promise = new Promise((resolve, reject) => {            // Construtor de 'Promise' para definir o estado de 'fulfill' e 'reject' da promessa.
+let promise = new Promise((resolve, reject) => {            // Construtor de 'Promise' para definir o estado de 'resolve' e 'reject' da promessa.
     resolve();
     reject();
 });
 
 promise.then(
-    function (valor) {
-        setInterval
-        return console.log(true);
-    },
-    function (erro) {
-        return console.log(false);
-    }
+    setTimeout(function (valor) {
+        return console.log('Condição Resolvida = ' + true);
+    }, 2000),
+    setTimeout(function (erro) {
+        return console.log('Condição Rejeitada = ' + false);
+    }, 1500)
 );
