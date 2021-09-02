@@ -1,12 +1,33 @@
-Métodos de Instalação do React
+MÉTODOS DE INSTALAÇÃO DO REACT
 
-1º => OLD
-    Utilizar o comando 'npm init' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos, depois digite o comando 'npm install --save react@XX.X.X react-dom@XX.X.X react-scripts@XX.X.X' ( @XX.X.X para escolher a versão). Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão e as configurações de servidor 'Nodejs' automaticamente.
+    => OLD
+        Utilizar o comando 'npm init' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos, depois digite o comando 'npm install --save react@XX.X.X react-dom@XX.X.X react-scripts@XX.X.X' ( @XX.X.X para escolher a versão). Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão e as configurações de servidor 'Nodejs' automaticamente.
 
-2º => MODERN
-    Utilizar o comando 'npx create-react-app nome-do-app' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos e passe para a pasta usando 'cd nome-do-app' e depois inicie com 'npm start'. Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão com a build pipeline para o frontend, com a liberdade de escolher qualquer linguagem backend.
+    => MODERN
+        Utilizar o comando 'npx create-react-app nome-do-app' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos e passe para a pasta usando 'cd nome-do-app' e depois inicie com 'npm start'. Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão com a build pipeline para o frontend, com a liberdade de escolher qualquer linguagem backend.
 
-Utilização da extensão de sintaxe JSX no REACT
+USO DA EXTENSÃO DE SINTAXE JSX NO REACT
 
-Para utilizar o JSX sobre o JavaScript para melhorar a escrita do código no React, temos que utilizar o transpilador 'Babel'. Através dele, o navegador será capaz de interpretar o código com JSX permitindo escrever 'tags' como valor de atribuição (não é HTML, nem string) à uma variável no JavaScript. Apesar de não ser obrigatório, é fundamental na eficiência de código. Outro transpilador famoso é o 'TypeScript', que expande ainda mais a capacidade do JavaScript no desenvolvimento de aplicações em React.
+    Para utilizar o JSX sobre o JavaScript para melhorar a escrita do código no React, temos que utilizar o transpilador 'Babel'. Através dele, o navegador será capaz de interpretar o código com JSX permitindo escrever 'tags' como valor de atribuição (não é HTML, nem string) à uma variável no JavaScript. Apesar de não ser obrigatório, é fundamental na eficiência de código. Outro transpilador famoso é o 'TypeScript', que expande ainda mais a capacidade do JavaScript no desenvolvimento de aplicações em React.
 
+COMPONENTS NO REACT
+
+    O React trabalha com o conceito de 'COMPONENTS', que são códigos de construção de um item (tag HTML) customizado. Eles podem ser construídos apenas uma vez e reaproveitados várias vezes no mesmo ou em outro projeto.
+    Geralmente os 'COMPONENTS' são criados dentro de funções do JavaScript e seguem a seguinte sintaxe:
+        Ex.1 => Componente Único (pode ser utilizado sem a tag div)
+        const ComponenteBotao = () => {
+            return {
+                    <button>{ 'elementos do código ou um novo código' }</button>
+            }
+        }
+
+        Ex.2 => Componente Composto (exige o uso de uma div p/ agrupar os itens/tags)
+        const ComponenteBotao2 = () => {
+            return {
+                <div>
+                    <button>{ 'elementos do código ou um novo código' }</button>
+                    <button>{ 'elementos do código ou um novo código' }</button>
+                </div>
+            }
+        }
+       
