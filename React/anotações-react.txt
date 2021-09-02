@@ -30,4 +30,3 @@ COMPONENTS NO REACT
                 </div>
             }
         }
-       
