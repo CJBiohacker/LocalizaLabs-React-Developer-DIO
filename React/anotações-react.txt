@@ -14,14 +14,14 @@ COMPONENTS NO REACT
 
     O React trabalha com o conceito de 'COMPONENTS', que são códigos de construção de um item (tag HTML) customizado. Eles podem ser construídos apenas uma vez e reaproveitados várias vezes no mesmo ou em outro projeto.
     Geralmente os 'COMPONENTS' são criados dentro de funções do JavaScript e seguem a seguinte sintaxe:
-        Ex.1 => Componente Único (pode ser utilizado sem a tag div)
+        Ex.:1 => Componente Único (pode ser utilizado sem a tag div)
         const ComponenteBotao = () => {
             return {
                     <button>{ 'elementos do código ou um novo código' }</button>
             }
         }
 
-        Ex.2 => Componente Composto (exige o uso de uma div p/ agrupar os itens/tags)
+        Ex.:2 => Componente Composto (exige o uso de uma div p/ agrupar os itens/tags)
         const ComponenteBotao2 = () => {
             return {
                 <div>
@@ -30,3 +30,19 @@ COMPONENTS NO REACT
                 </div>
             }
         }
+    
+    Ao utilizar/aplicar um 'COMPONENT' dentro da função 'App.js' (arquivo principal onde se desenvolve a aplicação), quando for passar uma propriedade é necessário atribuir como função (formato tradicional ou arrow function) em formato de objeto.
+        
+        Ex.: => Utilizando um componente importado botão, aplicando uma função de multiplicação numa janela 'alert' no HTML e um nome dentro do botão.
+            
+            const multip = (a,b) => {
+                return alert( a * b )
+            }
+            
+            function App() {
+                return {
+                 <Button onClick={() => multip(10, 5)} name="Carlos Junior" />
+                }
+            }
+
+    
