@@ -12,23 +12,14 @@ const sum = (a, b) => {
   alert(`Idade => ${a + b} anos`);
 }
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Olá Mundo FilhadaMãe !!!
-        </p>
+        <p>Clique nos botões para saber a idade:</p>
         <ButtonCJ onClick={() => sum(20, 11)} name="Carlos Junior" />
         <ButtonTheBoss onClick={() => sum(20, 22)} name="The Boss" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
