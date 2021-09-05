@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = (props) => {
+const ButtonTheBoss = (props) => {
 
     const { name, onClick } = props                     // Desestruturação pra atribuir 2 atributos pra constante 'props' que será um callback do componente 'Button'.
 
@@ -9,4 +9,4 @@ const Button = (props) => {
     )
 }
 
-export default Button
+export default ButtonTheBoss
