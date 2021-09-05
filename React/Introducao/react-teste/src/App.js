@@ -8,6 +8,8 @@ import logo from './Assets/logo.svg';
 // Styles
 import './Styles/App.css';
 
+const numbers = [1, 2, 3, 4, 5];
+
 const condition = true;
 
 const sum = (a, b) => {
