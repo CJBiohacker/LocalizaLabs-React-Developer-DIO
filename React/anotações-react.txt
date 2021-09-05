@@ -4,7 +4,7 @@ MÉTODOS DE INSTALAÇÃO DO REACT
         Utilizar o comando 'npm init' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos, depois digite o comando 'npm install --save react@XX.X.X react-dom@XX.X.X react-scripts@XX.X.X' ( @XX.X.X para escolher a versão). Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão e as configurações de servidor 'Nodejs' automaticamente.
 
     => MODERN
-        Utilizar o comando 'npx create-react-app nome-do-app' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos e passe para a pasta usando 'cd nome-do-app' e depois inicie com 'npm start'. Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão com a build pipeline para o frontend, com a liberdade de escolher qualquer linguagem backend.
+        Utilizar o comando 'npx create-react-app nome-do-app' na pasta desejada, através do terminal 'bash' ou 'wsl2'. Confirme todos campos e passe para a pasta usando 'cd nome-do-app' e depois inicie com 'npm start' ou 'yarn start' (depende do gerenciador de pacotes utilizado para instalação). Nesta sequência de comandos, ele instala as dependências da biblioteca 'React' padrão com a build pipeline para o frontend, com a liberdade de escolher qualquer linguagem backend.
 
 USO DA EXTENSÃO DE SINTAXE JSX NO REACT
 
@@ -13,25 +13,25 @@ USO DA EXTENSÃO DE SINTAXE JSX NO REACT
 COMPONENTS NO REACT
 
     O React trabalha com o conceito de 'COMPONENTS', que são códigos de construção de um item (tag HTML) customizado. Eles podem ser construídos apenas uma vez e reaproveitados várias vezes no mesmo ou em outro projeto.
-    Geralmente os 'COMPONENTS' são criados dentro de funções do JavaScript e seguem a seguinte sintaxe:
+    Geralmente os 'COMPONENTS' são criados dentro de funções do JavaScript e seguem a seguinte sintaxe JSX (JavaScript transpilado pelo Babel):
         Ex.:1 => Componente Único (pode ser utilizado sem a tag div)
         const ComponenteBotao = () => {
-            return {
+            return (
                     <button>{ 'elementos do código ou um novo código' }</button>
-            }
+            )
         }
 
         Ex.:2 => Componente Composto (exige o uso de uma div p/ agrupar os itens/tags)
         const ComponenteBotao2 = () => {
-            return {
+            return (
                 <div>
                     <button>{ 'elementos do código ou um novo código' }</button>
                     <button>{ 'elementos do código ou um novo código' }</button>
                 </div>
-            }
+            )
         }
     
-    Ao utilizar/aplicar um 'COMPONENT' dentro da função 'App.js' (arquivo principal onde se desenvolve a aplicação), quando for passar uma propriedade é necessário atribuir como função (formato tradicional ou arrow function) em formato de objeto.
+    Ao utilizar/aplicar um componente dentro da função 'App.js' (arquivo principal onde se desenvolve a aplicação), quando for passar uma propriedade é necessário atribuir como função (formato tradicional ou arrow function) em formato de objeto.
         
         Ex.: => Utilizando um componente importado botão, aplicando uma função de multiplicação numa janela 'alert' no HTML e um nome dentro do botão.
             
@@ -40,9 +40,63 @@ COMPONENTS NO REACT
             }
             
             function App() {
-                return {
+                return (
                  <Button onClick={() => multip(10, 5)} name="Carlos Junior" />
-                }
+                )
+            }
+    
+    Além disso, ainda é possível criar uma hierarquia entre os componentes criados com o uso do método 'children'. Jogamos ela em uma tag 'div' dentro do componente, através da propriedade passada como argumento. Para criar uma cadeia entre componentes é só repetir o processo dentro de cada componente e depois lançar as tags no arquivo do código da aplicação React.
+
+        Ex.: => Hierarquia entre 3 componentes: A, B e C.
+
+        COMPONENTE A
+            const CompA = (props) => {
+                return (
+                    <div>Componente A
+                        <div>{props.children}</div>
+                    </div>
+                )
+            }
+            
+            export default CompA
+
+        COMPONENTE B
+            const CompB = (props) => {
+                return (
+                    <div>Componente B
+                        <div>{props.children}</div>
+                    </div>
+                )
+            }
+            
+            export default CompB
+        
+         COMPONENTE C
+            const CompA = (props) => {
+                return (
+                    <button>Componente C</button>
+                )
+            }
+            
+            export default CompA
+
+        CÓDIGO DA APLICAÇÃO (App.js)
+            import CompA from './path/CompA'
+            import CompB from './path/CompB'
+            import CompC from './path/CompC'
+
+            const App = () => {
+                return (
+                   <div>
+                        <CompA>
+                            <CompB>
+                                <CompC />
+                            </CompB>
+                        </CompA>
+                    </div> 
+                )    
             }
 
-    
+            export default App;
+
+Esses são alguns conceitos básicos pra mostrar a capacidade da biblioteca do React, conhecida pela sua versatilidde e escalabilidade no desenvolvimento de aplicações e interfaces na parte do FrontEnd.
