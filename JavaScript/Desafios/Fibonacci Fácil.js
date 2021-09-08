@@ -1,5 +1,3 @@
-// const input = gets();
-
 const fib = (n) => {                                // Arrow Function que recebe um valor 'n' que será a quantidade de números da sequência de fibonnaci.
     if (0 < n < 46) {                               // Condicional com regra definida. 'n' é um número entre 0 e 46.
         const fibSeq = [0, 1];                      // Estando dentro da condição, ele cria uma array 'fibSeq' com os 2 valores mínimos inicias para existir a sequência.
@@ -13,3 +11,4 @@ const fib = (n) => {                                // Arrow Function que recebe
 };
 
 fib(10);                                            // Chamada da função com o valor definido
+
