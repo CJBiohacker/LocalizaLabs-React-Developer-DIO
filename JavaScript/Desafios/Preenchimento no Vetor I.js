@@ -5,8 +5,8 @@ const vectorAddV = vector.unshift(v);           // Adição do número atribuíd
 
 const output = () => {                          // Arrow Function 'output' contendo a lógica do desafio.
     for (let i = 0; i < 10; i++) {              // Loop 'for' que repete até o índice 9 de 'vector'.
-        console.log(`N[${i}] = ${vector[i]}`);  // Imprime o índice e o valor do índice atual de 'vector';
-        vector.push(vector[i] * 2);             // Adicionar um elemento no final de 'vector', sendo o dobro do valor anterior.
+        console.log(`N[${i}] = ${vector[i]}`);  // Imprime o índice e seu respectivo valor de 'vector';
+        vector.push(vector[i] * 2);             // Adiciona um elemento no final de 'vector', sendo o dobro do valor anterior.
     }
 }
 
