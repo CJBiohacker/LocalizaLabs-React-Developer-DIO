@@ -99,4 +99,17 @@ COMPONENTS NO REACT
 
             export default App;
 
-Esses são alguns conceitos básicos pra mostrar a capacidade da biblioteca do React, conhecida pela sua versatilidde e escalabilidade no desenvolvimento de aplicações e interfaces na parte do FrontEnd.
+    Esses são alguns conceitos básicos sobre 'Components' pra mostrar a capacidade da biblioteca do React, conhecida pela sua versatilidde e escalabilidade no desenvolvimento de aplicações e interfaces na parte do FrontEnd.
+
+CICLO DE VIDA DE UM COMPONENTE NO ReactJS
+
+    Os 'Components' do React além de serem utilizados como blocos complementares pro código da aplicação, também pode ser definidos como classes ('class components') ou como funções.
+    Para isso é necesário estender a classe criada para a API 'React.Component' e definir o método 'render()'. (o único método obrigatório)
+
+    EX. => Criando uma classe que representa um botão de confirmação com um nome.
+
+    class OkButton extends React.Component {
+        render() {
+            return <button>{this.props.name}</button>;
+        }
+    }
