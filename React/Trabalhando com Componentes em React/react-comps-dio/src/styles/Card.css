@@ -1,0 +1,9 @@
+.card {
+  margin-top: 10px;
+}
+.card #card-container .card-body .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*# sourceMappingURL=Card.css.map */
