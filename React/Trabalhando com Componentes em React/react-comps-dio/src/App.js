@@ -11,7 +11,7 @@ const App = () => {
       <ItemLista text='Item 3' />
       <Card title='Card' subtitle='Type = Component'
         text='Component card extracted from Bootstrap Framework'
-        greenButtonText='Click here if you enjoyed =D' redButtonText="Or click here if you're EVIL" />
+        greenButtonText='Click here if you enjoyed' redButtonText="Or click here if you're EVIL" />
     </div>
 
   );
