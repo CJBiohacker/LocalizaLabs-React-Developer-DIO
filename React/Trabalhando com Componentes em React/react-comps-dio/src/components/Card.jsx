@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import ButtonThumbDown from './ButtonThumbDown';
+import ButtonThumbUp from './ButtonThumbUp';
 
 import '../styles/Card.css'
 
@@ -26,13 +28,9 @@ const Card = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{subtitle}</h5>
                     <p className="card-text">{text}</p>
-                    <span className='buttons'>
-                        <button type="button"
-                            className="btn btn-outline-success"
-                            onClick={Like}>{greenButtonText} <img src="https://img.icons8.com/material-rounded/24/000000/facebook-like--v1.png" /> {greenValue}</button>
-                        <button type="button"
-                            className="btn btn-outline-danger"
-                            onClick={Dislike}>{redButtonText} <img src="https://img.icons8.com/material-rounded/24/000000/thumbs-down.png" /> {redValue}</button>
+                    <span className="buttons">
+                        <ButtonThumbUp onClick={Like} text={greenButtonText} children={greenValue} />
+                        <ButtonThumbDown onClick={Dislike} text={redButtonText} children={redValue} />
                     </span>
                 </div>
             </div>
