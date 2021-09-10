@@ -1,5 +1,5 @@
 import ItemLista from './components/ItemLista'
-import Card from './components/Card'
+import Card from './components/Card.jsx'
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
       <ItemLista text='Item 3' />
       <Card title='Card' subtitle='Type = Component'
         text='Component card extracted from Bootstrap Framework'
-        buttonText='Click here if you enjoyed =D' />
+        greenButtonText='Click here if you enjoyed =D' redButtonText="Or click here if you're EVIL" />
     </div>
 
   );
