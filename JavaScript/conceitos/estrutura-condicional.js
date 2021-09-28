@@ -48,7 +48,7 @@ switch (d) {
 // Estrutura Condicional If...If com um forEach para iterações dos elementos de uma Array. É um método alternativo ao Switch...Case.(Utilizado quando a condicional se aplica em mais de um resultado. Quando é necessário fazer análises paralelas dos itens.)
 
 console.log("\nIF...IF");
-numeros.forEach((item) => {
+numeros.forEach(item => {
     if (item % 2 == 0) {
         console.log(`O nº ${item} é divisível por 2`);
     } if (item % 3 == 0) {
