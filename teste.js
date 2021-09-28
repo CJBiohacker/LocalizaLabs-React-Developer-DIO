@@ -1,32 +1,61 @@
 const array = [3, 5, -4, 8, 11, 1, -1, 6];
-// const targetSum = 10;
-
-// const getSumArrayNumberNoRepeat = (A, B) => {
-//     let numberA = A[Math.floor(Math.random() * A.length)];
-//     let numberB = B[Math.floor(Math.random() * B.length)];
-//     let sum = numberA + numberB;
-
-//     while (sum !== 10 && (numberB == numberA)) {
-//         (sum === targetSum && (numberB !== numberA)) ? console.log(sum) : ((numberB = B[Math.floor(Math.random() * B.length)]));
-//     }
-
-//     return console.log([numberA, numberB]);
-// };
-
-// getSumArrayNumberNoRepeat(array, array);
-
+const targetSum = 10;
 
 const RandomNumberA = (a) => {
-    numberA = a[Math.floor(Math.random() * a.length)];
+    let numberA = a[Math.floor(Math.random() * a.length)];
 
-    return console.log(numberA);
+    return numberA;
 }
 
 const RandomNumberB = (b) => {
-    numberB = b[Math.floor(Math.random() * b.length)];
+    let numberB = b[Math.floor(Math.random() * b.length)];
 
-    return console.log(numberB);
+    return numberB;
 }
 
+const TargetSumArray = (A, B) => {
+    let sum = A + B;
+    console.log(`Antes do If Geral ${A} + ${B} = ${sum}`);
 
+    switch ((A !== B) && (sum === targetSum)) {
+        case true:
+            return console.log([A, B]);
+            break;
+
+        case false:
+            while ((A === B) && (sum != targetSum)) {
+
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+TargetSumArray(RandomNumberA(array), RandomNumberB(array));
+
+// const TargetSumArray = (A, B) => {
+//     let sum = A + B;
+//     console.log(`Antes do If Geral ${A} + ${B} = ${sum}`);
+
+//     if (A != B) {
+//         if (sum == 10) {
+//             return console.log([A, B]);
+//         }
+//     } else {
+//         console.log(`Após o else ${A} + ${B} = ${sum}`);
+//         while ((A == B) && (sum != targetSum)) {
+//             A = RandomNumberA(array);
+//             B = RandomNumberB(array);
+//             sum = A + B
+//             console.log(`Dentro do While ${A} + ${B} = ${sum}`);
+//             if (A != B) {
+//                 if (sum == 10) {
+//                     break;
+//                 }
+//             }
+//         }
+//         return console.log(`Return Final ${A} + ${B} = ${sum}`);
+//     }
+// }
 
