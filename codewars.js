@@ -1,20 +1,30 @@
-/* THE WIDE-MOUTHED FROG! CODEWARS */
-function mouthSize(animal) {
-    let animalIf = animal.toLowerCase();
+/* RETURN TWO HIGHEST VALUES IN LIST */
+const array = [4, 30, 10, 9, 10];
 
-    if (animalIf == "alligator") {
-        mouth = "small";
-    } else {
-        mouth = "wide";
-    }
-    return console.log(mouth)
-}
+const twoHighest = array.reduce((a, b) => {
+    let x = Math.max(a, b)
 
-mouthSize("Tamanduá");
-mouthSize("ALLIGATOR");
+    return x;
+});
+
+console.log([twoHighest]);
+
+// usar método map de array.
 
 /* ------------------------------------------- */
 
+// /* THE WIDE-MOUTHED FROG! CODEWARS */
+// const mouthSize = (animal) => {
+//     let animalIf = animal.toLowerCase();
+
+//     (animalIf == "alligator") ? (mouth = "small") : (mouth = "wide");
+//     return console.log(mouth)
+// };
+
+// mouthSize("Tamanduá");
+// mouthSize("ALLIGATOR");
+
+// /* ------------------------------------------- */
 
 /* SPRAYING TREES CODEWARS */
 // function task(w, n, c) {
