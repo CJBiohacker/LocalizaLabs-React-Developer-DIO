@@ -13,49 +13,27 @@ const RandomNumberB = (b) => {
     return numberB;
 }
 
-const TargetSumArray = (A, B) => {
-    let sum = A + B;
-    console.log(`Antes do If Geral ${A} + ${B} = ${sum}`);
+let A = RandomNumberA(array);
+let B = RandomNumberB(array);
+let sum = A + B;
+const condTrue = A !== B && sum === targetSum;
+const condFalse = (A === B && sum !== targetSum || A === B && sum === targetSum || A !== B && sum !== targetSum);
+console.log(`A:${A} B:${B} Soma:${sum}`);
 
-    switch ((A !== B) && (sum === targetSum)) {
-        case true:
-            return console.log([A, B]);
-            break;
+const TargetArray = (A, B) => {
 
-        case false:
-            while ((A === B) && (sum != targetSum)) {
-
-            }
-            break;
-        default:
-            break;
+    if (condTrue) {
+        return console.log("CASO TRUE 1"[A, B]);
+    } else {
+        do {
+            A = RandomNumberA(array);
+            B = RandomNumberB(array);
+            sum = A + B;
+            console.log(`A:${A} B:${B} Soma:${sum}`);
+        } while (condFalse);
+        return console.log("CASO TRUE 2"[A, B]);
     }
+
 }
 
-TargetSumArray(RandomNumberA(array), RandomNumberB(array));
-
-// const TargetSumArray = (A, B) => {
-//     let sum = A + B;
-//     console.log(`Antes do If Geral ${A} + ${B} = ${sum}`);
-
-//     if (A != B) {
-//         if (sum == 10) {
-//             return console.log([A, B]);
-//         }
-//     } else {
-//         console.log(`Após o else ${A} + ${B} = ${sum}`);
-//         while ((A == B) && (sum != targetSum)) {
-//             A = RandomNumberA(array);
-//             B = RandomNumberB(array);
-//             sum = A + B
-//             console.log(`Dentro do While ${A} + ${B} = ${sum}`);
-//             if (A != B) {
-//                 if (sum == 10) {
-//                     break;
-//                 }
-//             }
-//         }
-//         return console.log(`Return Final ${A} + ${B} = ${sum}`);
-//     }
-// }
-
+TargetArray(A, B);
