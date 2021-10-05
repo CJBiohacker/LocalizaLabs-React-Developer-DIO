@@ -24,7 +24,7 @@ const [front, rear] = [                                 // Atribuição via dese
 
 const photoEvaluation = () => {                         // Função final que avalia a condição proposta no enunciado.
     let photo = (front < rear) ?                        // Se o altura mínima da fila da frente for menor que a altura minima da fila de trás,
-        console.log(true) :                             // a condição atinge a o requisito e retorna 'TRUE',
+        console.log(true) :                             // a condição atinge o requisito e retorna 'TRUE',
         console.log(false);                             // senão retorna 'FALSE'.
 
     return photo;
