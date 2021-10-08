@@ -18,29 +18,22 @@ SAÍDA ESPERADA
 
 const string = "BBBBBBBBBBBBBAACCCDD";
 
-const comparison = string.match();
-
-String.fromCharCode(90)                     // Retorna as letras do alfabeto (A-Z), a partir de números ASCII. 
-
-console.log();
-
-for (let i = 65, j = 0; i <= 90, j < string.length; i++, j++) {            // Repetição de índice para Código ASCII e para posição de cada caractere do código em 'string'.
+for (let i; i < string.length; i++) {                   // Consertar o for e if.
 
     let nChar = 0;
+    let newString;
+    let finalString;
 
-    if (String.fromCharCode(i) == string.charAt(j)) {
-        nChar++;
-        if (nChar++ < 10) {
-
+    if (string[0]) {                                    // Comparar o índice da string com o caractere atual.
+        while (nChar < 10) {
+            nChar++;
+            newString = nChar.toString().concat();      // Consertar o 
         }
-    } else {
+        finalString = newString.concat(newString);
     }
-
 }
 
 // CÓDIGO ASCII A--Z == 65--90 == U+0041--U+005A 
-
-
 
 // CONTADOR DE CARACTERES
 // ALTERAR A STRING ASSIM QUE HOUVER A TRANSIÇÃO DE CARACTERES
@@ -61,4 +54,23 @@ for (let i = 65, j = 0; i <= 90, j < string.length; i++, j++) {            // Re
 //     });
 // };
 
-// console.log(filterArray(arrayString, 'B')); 
+
+// ITERADOR DO ALFABETO VIA UNICODE DE STRING
+// const string = "BBBBBBBBBBBBBAACCCDD";
+
+// for (let i = 65, j = 0; i <= 90, j < string.length; i++, j++) {     // Repetição de índice para Código ASCII e para posição de cada caractere do código em 'string'.
+
+//     let nChar = 0;
+//     let newString;
+//     let finalString;
+
+//     if (String.fromCharCode(i) == string.charAt(j)) {               // Retorna as letras do alfabeto (A-Z), a partir de números ASCII. 
+//         while (nChar < 10) {
+//             nChar++;
+//             newString = nChar.toString().concat();
+//             (string.charAt(j) != String.fromCharCode(i)) ?
+//         }
+//         finalString = newString.concat(newString);
+
+//     }
+// }
